@@ -6,7 +6,7 @@
 <!-- default badges end -->
 # Presentation Document API  - Customize Presentation Appearance with Themes and Styles
 
-Code samples within this repository customize PowerPoint presentation themes using DevExpress Presentation API: color and font schemes, formatting, shape styles, theme overrides for individual slides and layouts, and color remapping.
+Code samples within this repository customize PowerPoint presentation themes using the DevExpress Presentation API: color and font schemes, formatting, shape styles, theme overrides for individual slides and layouts, and color remapping.
 
 ## Files to Review
 
