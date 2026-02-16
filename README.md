@@ -21,7 +21,7 @@ Code samples within this repository customize PowerPoint presentation themes usi
 - [Extract Presentation Images, Notes, and Pictures](https://github.com/DevExpress-Examples/presentation-api-extract-content)
 
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=presentation-api-customize-themes&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=presentation-api-customize-themes&~~~was_helpful=no)
 
