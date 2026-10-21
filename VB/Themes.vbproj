@@ -12,6 +12,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.Docs.Presentation" Version="26.1.5" />
+    <PackageReference Include="DevExpress.Docs.Presentation" Version="26.1.6" />
   </ItemGroup>
 </Project>
