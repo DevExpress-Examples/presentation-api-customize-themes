@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using DevExpress.Docs;
 using DevExpress.Docs.Presentation;
+using DevExpress.Docs.Office;
 
 class Program {
     static void Main() {
@@ -111,43 +112,43 @@ class Program {
         if (myTheme == null) return;
 
         // Edit format scheme fills
-        myTheme.FormatScheme.Fills.ResetTo(new List<Fill> {
-            new SolidFill(Color.Red),
-            new SolidFill(Color.Magenta),
-            new SolidFill(Color.Lime)
+        myTheme.FormatScheme.Fills.ResetTo(new List<DevExpress.Docs.Office.Fill> {
+            new DevExpress.Docs.Office.SolidFill(Color.Red),
+            new DevExpress.Docs.Office.SolidFill(Color.Magenta),
+            new DevExpress.Docs.Office.SolidFill(Color.Lime)
         });
 
         // Edit format scheme background fills
-        myTheme.FormatScheme.BackgroundFills.ResetTo(new List<Fill> {
-            new SolidFill(Color.Purple),
-            new SolidFill(Color.Yellow),
-            new SolidFill(Color.DarkGoldenrod)
+        myTheme.FormatScheme.BackgroundFills.ResetTo(new List<DevExpress.Docs.Office.Fill> {
+            new DevExpress.Docs.Office.SolidFill(Color.Purple),
+            new DevExpress.Docs.Office.SolidFill(Color.Yellow),
+            new DevExpress.Docs.Office.SolidFill(Color.DarkGoldenrod)
         });
 
         // Edit format scheme line styles
         myTheme.FormatScheme.LineStyles.ResetTo(new List<LineStyle> {
             new LineStyle() {
                 Width = 50,
-                DashType = LineDashType.Dot,
-                Fill = new SolidFill(Color.Red)
+                DashType = DevExpress.Docs.Office.LineDashType.Dot,
+                Fill = new DevExpress.Docs.Office.SolidFill(Color.Red)
             },
             new LineStyle() {
                 Width = 20,
-                DashType = LineDashType.DashDot,
-                Fill = new SolidFill(Color.Magenta)
+                DashType = DevExpress.Docs.Office.LineDashType.DashDot,
+                Fill = new DevExpress.Docs.Office.SolidFill(Color.Magenta)
             },
             new LineStyle() {
                 Width = 5,
-                DashType = LineDashType.Solid,
-                Fill = new SolidFill(Color.Lime)
+                DashType = DevExpress.Docs.Office.LineDashType.Solid,
+                Fill = new DevExpress.Docs.Office.SolidFill(Color.Lime)
             }
         });
 
         // Edit format scheme effects
         myTheme.FormatScheme.Effects.ResetTo(new List<ShapeEffectProperties> {
-            new ShapeEffectProperties() { Blur = new BlurEffect(100, true) },
-            new ShapeEffectProperties() { InnerShadow = new InnerShadowEffect() },
-            new ShapeEffectProperties() { Glow = new GlowEffect(15) }
+            new ShapeEffectProperties() { Blur = new DevExpress.Docs.Office.BlurEffect(100, true) },
+            new ShapeEffectProperties() { InnerShadow = new DevExpress.Docs.Office.InnerShadowEffect() },
+            new ShapeEffectProperties() { Glow = new DevExpress.Docs.Office.GlowEffect(15) }
         });
         Console.WriteLine("Format scheme customized for the presentation.");
     }
@@ -166,9 +167,9 @@ class Program {
                     FillThemeIndex = 1,
                     OutlineThemeIndex = 1,
                 },
-                TextArea = new TextArea("Sample themed shape") {
-                    Level1ParagraphProperties = new ParagraphProperties() {
-                        TextProperties = new TextProperties() {
+                TextArea = new DevExpress.Docs.Office.TextArea("Sample themed shape") {
+                    Level1ParagraphProperties = new DevExpress.Docs.Office.TextParagraphProperties() {
+                        TextProperties = new DevExpress.Docs.Office.TextProperties() {
                             FontSize = 32,
                         },
                     },
@@ -204,10 +205,10 @@ class Program {
         themeOverride.FormatScheme = formatScheme;
 
         // Set required fills
-        themeOverride.FormatScheme.Fills.ResetTo(new List<Fill> {
-            new SolidFill(Color.Red),
-            new SolidFill(Color.Magenta),
-            new SolidFill(Color.Lime)
+        themeOverride.FormatScheme.Fills.ResetTo(new List<DevExpress.Docs.Office.Fill> {
+            new DevExpress.Docs.Office.SolidFill(Color.Red),
+            new DevExpress.Docs.Office.SolidFill(Color.Magenta),
+            new DevExpress.Docs.Office.SolidFill(Color.Lime)
         });
 
         // Apply override to slide
@@ -266,34 +267,34 @@ class Program {
         ThemeFormatScheme customFormats = new ThemeFormatScheme();
 
         // Add fills (minimum 3 required)
-        customFormats.Fills.Add(new SolidFill(new OfficeColor(Color.FromArgb(68, 114, 196))));
-        customFormats.Fills.Add(new GradientFill(
-            GradientType.Linear, [
+        customFormats.Fills.Add(new DevExpress.Docs.Office.SolidFill(new OfficeColor(Color.FromArgb(68, 114, 196))));
+        customFormats.Fills.Add(new DevExpress.Docs.Office.GradientFill(
+            DevExpress.Docs.Office.GradientType.Linear, [
                 new GradientStop(new OfficeColor(Color.White), 0.0),
                 new GradientStop(new OfficeColor(Color.FromArgb(68, 114, 196)), 1.0)
             ]
         ));
-        customFormats.Fills.Add(new SolidFill(new OfficeColor(Color.FromArgb(112, 173, 71))));
+        customFormats.Fills.Add(new DevExpress.Docs.Office.SolidFill(new OfficeColor(Color.FromArgb(112, 173, 71))));
 
         // Add background fills (minimum 3 required)
-        customFormats.BackgroundFills.Add(new SolidFill(new OfficeColor(Color.White)));
-        customFormats.BackgroundFills.Add(new SolidFill(new OfficeColor(Color.FromArgb(242, 246, 252))));
-        customFormats.BackgroundFills.Add(new GradientFill(
-            GradientType.Linear, [
+        customFormats.BackgroundFills.Add(new DevExpress.Docs.Office.SolidFill(new OfficeColor(Color.White)));
+        customFormats.BackgroundFills.Add(new DevExpress.Docs.Office.SolidFill(new OfficeColor(Color.FromArgb(242, 246, 252))));
+        customFormats.BackgroundFills.Add(new DevExpress.Docs.Office.GradientFill(
+            DevExpress.Docs.Office.GradientType.Linear, [
                 new GradientStop(new OfficeColor(Color.White), 0.0),
                 new GradientStop(new OfficeColor(Color.FromArgb(242, 246, 252)), 1.0)
             ]
         ));
 
         // Add line styles (minimum 3 required)
-        customFormats.LineStyles.Add(new LineStyle() { Width = 1, Fill = new SolidFill(new OfficeColor(Color.FromArgb(68, 114, 196))) });
-        customFormats.LineStyles.Add(new LineStyle() { Width = 2, Fill = new SolidFill(new OfficeColor(Color.FromArgb(112, 173, 71))) });
-        customFormats.LineStyles.Add(new LineStyle() { Width = 3, Fill = new SolidFill(new OfficeColor(Color.FromArgb(255, 192, 0))) });
+        customFormats.LineStyles.Add(new LineStyle() { Width = 1, Fill = new DevExpress.Docs.Office.SolidFill(new OfficeColor(Color.FromArgb(68, 114, 196))) });
+        customFormats.LineStyles.Add(new LineStyle() { Width = 2, Fill = new DevExpress.Docs.Office.SolidFill(new OfficeColor(Color.FromArgb(112, 173, 71))) });
+        customFormats.LineStyles.Add(new LineStyle() { Width = 3, Fill = new DevExpress.Docs.Office.SolidFill(new OfficeColor(Color.FromArgb(255, 192, 0))) });
 
         // Add effects (minimum 3 required)
-        customFormats.Effects.Add(new ShapeEffectProperties() { Blur = new BlurEffect(4, true) });
-        customFormats.Effects.Add(new ShapeEffectProperties() { InnerShadow = new InnerShadowEffect() });
-        customFormats.Effects.Add(new ShapeEffectProperties() { Glow = new GlowEffect(5) });
+        customFormats.Effects.Add(new ShapeEffectProperties() { Blur = new DevExpress.Docs.Office.BlurEffect(4, true) });
+        customFormats.Effects.Add(new ShapeEffectProperties() { InnerShadow = new DevExpress.Docs.Office.InnerShadowEffect() });
+        customFormats.Effects.Add(new ShapeEffectProperties() { Glow = new DevExpress.Docs.Office.GlowEffect(5) });
 
         // Assign custom theme to master
         myTheme.ColorScheme = customColors;
@@ -323,10 +324,10 @@ class Program {
             customTheme.FontScheme = overrideFonts;
 
             ThemeFormatScheme customFormats = new ThemeFormatScheme();
-            customFormats.Fills.ResetTo(new List<Fill> {
-                new SolidFill(Color.Purple),
-                new SolidFill(Color.Orange),
-                new SolidFill(Color.Yellow)
+            customFormats.Fills.ResetTo(new List<DevExpress.Docs.Office.Fill> {
+                new DevExpress.Docs.Office.SolidFill(Color.Purple),
+                new DevExpress.Docs.Office.SolidFill(Color.Orange),
+                new DevExpress.Docs.Office.SolidFill(Color.Yellow)
             });
             customTheme.FormatScheme = customFormats;
 
