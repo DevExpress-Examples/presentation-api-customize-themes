@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
 using System.Drawing;
 using System.Diagnostics;
 using System.Linq;
@@ -6,8 +6,8 @@ using DevExpress.Docs;
 using DevExpress.Docs.Presentation;
 using DevExpress.Docs.Office;
 
-class Program {
-    static void Main() {
+public class Program {
+    public static void Main(string[] _) {
         while (true) {
             // Show menu for user action selection
             Console.WriteLine("Select an action:");
@@ -270,8 +270,8 @@ class Program {
         customFormats.Fills.Add(new DevExpress.Docs.Office.SolidFill(new OfficeColor(Color.FromArgb(68, 114, 196))));
         customFormats.Fills.Add(new DevExpress.Docs.Office.GradientFill(
             DevExpress.Docs.Office.GradientType.Linear, [
-                new GradientStop(new OfficeColor(Color.White), 0.0),
-                new GradientStop(new OfficeColor(Color.FromArgb(68, 114, 196)), 1.0)
+                new GradientStop(Color.White, 0),
+                new GradientStop(Color.FromArgb(68, 114, 196), 1)
             ]
         ));
         customFormats.Fills.Add(new DevExpress.Docs.Office.SolidFill(new OfficeColor(Color.FromArgb(112, 173, 71))));
@@ -281,8 +281,8 @@ class Program {
         customFormats.BackgroundFills.Add(new DevExpress.Docs.Office.SolidFill(new OfficeColor(Color.FromArgb(242, 246, 252))));
         customFormats.BackgroundFills.Add(new DevExpress.Docs.Office.GradientFill(
             DevExpress.Docs.Office.GradientType.Linear, [
-                new GradientStop(new OfficeColor(Color.White), 0.0),
-                new GradientStop(new OfficeColor(Color.FromArgb(242, 246, 252)), 1.0)
+                new GradientStop(Color.White, 0),
+                new GradientStop(Color.FromArgb(242, 246, 252), 1)
             ]
         ));
 
